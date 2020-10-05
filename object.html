@@ -1,0 +1,56 @@
+<script>
+    //create object Helen
+    let Helen = {
+        //define object properties
+        Firtsname:"Helen",
+        Lastname: "Bell",
+        age: 25,
+        gender: "F",
+        from: "Portugal",
+        //is possible to define a function in property
+        fullname: function(){
+            return "Full name: " + this.Firtsname + " " + this.Lastname;
+        }
+    }
+
+    //create object Adam
+    let Adam = new Object();
+    Adam.Firtsname = "Adam";
+    Adam.Lastname = "Erno";
+    Adam.birthday = "12-07-1994";
+    Adam.fullname = () => {
+        return Adam.Firtsname + " " + Adam.Lastname;
+    }
+
+    alert("Name: " + Helen.Firtsname + "\nfrom: " + Helen.from + "\ngender: " + Helen.gender);
+    // this wont print helen's full name, instead will return function definition
+    alert(Helen.fullname);
+    alert(Helen.fullname());
+
+
+    alert(Adam.fullname());
+    alert("Adam's birthday " + Adam.birthday);
+
+    //object property can be changed
+    Helen.gender = "M";
+    alert("Helen's gender: " + Helen.gender);
+
+
+    //this will display object value separated by comma ','
+    let array = Object.values(Adam);
+
+    alert(array);
+
+    //object constructor
+    function Book(name, type, author, isbn){
+        this.bookName = name;
+        this.bookType = type;
+        this.bookAuthor = author;
+        this.bookIsbn = isbn;
+    }
+
+    let book1 = new Book("Monk", "self help", "Jay Shetty", 321323441);
+
+    let bookarray = Object.values(book1);
+    console.log(bookarray);
+</script>
