@@ -1,3 +1,3 @@
-### javascript tutorial
+### Javascript tutorial
 
 
