@@ -1,0 +1,50 @@
+<script>
+    //create array animal. Index for dog is 0 and not 1, because in the array 0 count as 1 position.
+    let animal = ["dog", "cat", "mouse", "monkey", "crocodile", "tiger", "lion", "horse"];
+    //create array computerScience. This another way to create array. Is possible to create a object inside array
+    //avoid use this method to built array because let books = new Array(100) will create 100 undefined elements
+    let computerScience = new Array("Java", "c#", "c++", "html/css", "mysql", {school: "IPB", city: "bragança"});
+    let books = new Array(100);
+
+    //push a element to array
+    computerScience.push("Tech");
+    console.log(computerScience);
+    //remove last element
+    computerScience.pop();
+    console.log(computerScience);
+    //remove first element
+    computerScience.shift();
+    console.log(computerScience);
+    //add new element at beginning of array
+    computerScience.unshift("Java");
+    console.log(computerScience);
+
+    //log array animal
+    console.log(animal);
+
+    //You can use length porperty to get length of an an array.
+    console.log("array length " + animal.length);
+    console.log("array length " + books.length);
+
+    //iterarte array animal. Shows index and animal.
+    for(let i = 0; i < animal.length; i++){
+        console.log("Index: " + i + " animal: " + animal[i] + "\n");
+    }
+
+    //arrays values can be changed.
+    animal[0] = "chihuahua";
+
+    console.log(animal[0]);
+    
+    //arrays are type of Object.
+    console.log(typeof(computerScience));
+    console.log(typeof(computerScience[2]));
+    console.log(typeof(computerScience[computerScience.length - 1]));
+
+    //concatenate 2 arrays
+    let windows = ["xp", "vista", "basic"];
+    let linux = ["unbunut", "centos", "debian"];
+
+    let winLinux = windows.concat(linux);
+    console.log(winLinux);
+</script>
