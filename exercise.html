@@ -1,0 +1,43 @@
+<script>
+//1. You should be able to determine the location of an item in an array
+let pointer = [1,2,3,4,"a","b","c","d","dog","cat",100,200];
+
+function indexOfArray(arr, target){
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i] == target){
+            return target + " is in position " + (i+1) ;
+        } 
+    }
+}
+let returnedVal = indexOfArray(pointer, "100");
+console.log(returnedVal);
+
+//2. You should be able to add the values of an array
+let numbers = [1,2,3,4,5,6,7,89,100];
+
+function sumOfArray(arr){
+    let sum = 0;
+    for(let i = 0; i < arr.length; i++){
+        sum += arr[i];
+    }
+    return "Total sum = " + sum;
+}
+
+console.log(sumOfArray(numbers));
+
+//3. You should be able to remove an item from an array
+let someArray = [1,2,3,4,5,6,"cat"];
+
+function removeItem(arr, item){
+    for(let position = 0; position < arr.length; position++){
+        if(arr[position] == item){
+            arr.splice(position,1);
+            return arr;
+        }
+    }
+}
+console.log(someArray);
+console.log(removeItem(someArray,"cat"));
+
+
+</script>
