@@ -1,3 +1,19 @@
+<head>
+    <style>
+        button {
+            padding: 20px;
+            border-color: burlywood;
+        }
+        button:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+        #two {
+            font-size: large;
+            margin-top: 20px;
+        }
+    </style>
+</head>
 <body>
 
     <div id="one"></div>
@@ -6,11 +22,13 @@
 
 <script>
     let txt = document.getElementById("one");
+    txt.innerHTML = '<button onclick="func()">click here</button>';
+    
+    function func(){
+        alert('XSS Attack!!!');
+    }
+
     let txt2 = document.getElementById("two");
-    var numbers = [2,65,1,7,5];
-    let newone = numbers.map((num)=>{return "<h1>" + (num * 2) + "</h1>";})
-    let newtwo = numbers.map((num)=>{return "<h2>" + num + "</h2>";})
-    txt.innerHTML = newone;
-    txt2.textContent = newtwo;
+    txt2.textContent = "<h1> textContent! </h1>";
 </script>
 </body>
