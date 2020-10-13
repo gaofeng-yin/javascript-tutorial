@@ -1,0 +1,16 @@
+<body>
+
+    <div id="one"></div>
+
+    <div id="two"></div>
+
+<script>
+    let txt = document.getElementById("one");
+    let txt2 = document.getElementById("two");
+    var numbers = [2,65,1,7,5];
+    let newone = numbers.map((num)=>{return "<h1>" + (num * 2) + "</h1>";})
+    let newtwo = numbers.map((num)=>{return "<h2>" + num + "</h2>";})
+    txt.innerHTML = newone;
+    txt2.textContent = newtwo;
+</script>
+</body>
