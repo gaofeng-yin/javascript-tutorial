@@ -1,27 +1,37 @@
 <head>
+    <title>innerHTML vs textContent</title>
+
     <style>
         .content{
             text-align: center;
+            font-style: italic;
         }
     </style>
 </head>
 <body>
     <div class="content">
+
+        <h1>innerHTML vs textContent</h1>
+
       <form>
-        <textarea name="message" id="user_input" rows="4" cols="50" placeholder="For example: <h1>hello world!</h1> and checkout the result"></textarea>
+          <h3>Input</h3>
+        <textarea name="message" id="input" rows="4" cols="40" placeholder="For example: <h1>hello world!</h1> and checkout the result"><button type="button" onclick="alert('XSS attack')">Click Me!</button></textarea>
       </form>
     
       <input type="submit" onclick="inner();" value="innerHtml">
       <input type="submit" onclick="text();" value="textContent"><br/>
-      <label>Your input: </label>
+
+      <h3>Your input:</h3>
       <p><span id='display'></span></p>
     </div>
+
 <script>
     function inner() {
-        document.getElementById('display').innerHTML = document.getElementById("user_input").value;
+        document.getElementById('display').innerHTML = document.getElementById("input").value;
     }
     function text() {
-        document.getElementById('display').textContent = document.getElementById("user_input").value;
+        document.getElementById('display').textContent = document.getElementById("input").value;
     }
 </script>
+
 </body>
