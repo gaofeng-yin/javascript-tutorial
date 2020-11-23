@@ -1,34 +1,27 @@
 <head>
     <style>
-        button {
-            padding: 20px;
-            border-color: burlywood;
-        }
-        button:hover {
-            transform: scale(1.1);
-            cursor: pointer;
-        }
-        #two {
-            font-size: large;
-            margin-top: 20px;
+        .content{
+            text-align: center;
         }
     </style>
 </head>
 <body>
-
-    <div id="one"></div>
-
-    <div id="two"></div>
-
-<script>
-    let txt = document.getElementById("one");
-    txt.innerHTML = '<button onclick="func()">click here</button>';
+    <div class="content">
+      <form>
+        <textarea name="message" id="user_input" rows="4" cols="50" placeholder="For example: <h1>hello world!</h1> and checkout the result"></textarea>
+      </form>
     
-    function func(){
-        alert('XSS Attack!!!');
+      <input type="submit" onclick="inner();" value="innerHtml">
+      <input type="submit" onclick="text();" value="textContent"><br/>
+      <label>Your input: </label>
+      <p><span id='display'></span></p>
+    </div>
+<script>
+    function inner() {
+        document.getElementById('display').innerHTML = document.getElementById("user_input").value;
     }
-
-    let txt2 = document.getElementById("two");
-    txt2.textContent = "<h1> textContent! </h1>";
+    function text() {
+        document.getElementById('display').textContent = document.getElementById("user_input").value;
+    }
 </script>
 </body>
