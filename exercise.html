@@ -39,5 +39,18 @@ function removeItem(arr, item){
 console.log(someArray);
 console.log(removeItem(someArray,"cat"));
 
+//4. reverse number
+function reverseNum(inteiro){
+    //inteiro is type number 
+    console.log(typeof(inteiro));
+    //transform inteiro into type string
+    inteiro = inteiro + "";
+    console.log(typeof(inteiro));
+    //with string method to reverse number
+    return inteiro.split("").reverse().join("");
+}
+
+console.log(reverseNum(123));
+
 
 </script>
