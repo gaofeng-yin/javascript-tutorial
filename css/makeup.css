@@ -1,0 +1,20 @@
+.content{
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.contentMainPage{
+    text-align: center;
+    border-style: solid;
+    margin-top: 7px;
+    background-color: burlywood;
+}
+
+.contentMainPage:hover{
+    box-shadow: 5px 10px;
+}
+
+
+h1,p{
+    font-family: sans-serif;
+}
