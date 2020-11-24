@@ -6,7 +6,11 @@
 
 <body>
     <div class="content">
-    <h1>Object</h1>
+        <h1>Object</h1>
+
+        <p>Click f12 and checkout the source code below.</p>
+
+        <embed src="assets/object.txt" width="1000px" height="1050px" />
     </div>    
 </body>
 
@@ -35,7 +39,8 @@
     }
 
     console.log("Name: " + Helen.Firtsname + "\nfrom: " + Helen.from + "\ngender: " + Helen.gender);
-    // this wont print helen's full name, instead will return function definition
+
+    // this wont print helen's full name, instead will return function definition, never forget parenthesis. 
     console.log(Helen.fullname);
     console.log(Helen.fullname());
 
@@ -43,7 +48,7 @@
     console.log(Adam.fullname());
     console.log("Adam's birthday " + Adam.birthday);
 
-    //object property can be changed
+    //object property is mutable.
     Helen.gender = "M";
     console.log("Helen's gender: " + Helen.gender);
 

@@ -1,4 +1,4 @@
-     //create object Helen
+    //create object Helen
     let Helen = {
         //define object properties
         Firtsname:"Helen",
@@ -22,7 +22,8 @@
     }
 
     console.log("Name: " + Helen.Firtsname + "\nfrom: " + Helen.from + "\ngender: " + Helen.gender);
-    // this wont print helen's full name, instead will return function definition
+
+    // this wont print helen's full name, instead will return function definition, never forget parenthesis. 
     console.log(Helen.fullname);
     console.log(Helen.fullname());
 
@@ -30,7 +31,7 @@
     console.log(Adam.fullname());
     console.log("Adam's birthday " + Adam.birthday);
 
-    //object property can be changed
+    //object property is mutable.
     Helen.gender = "M";
     console.log("Helen's gender: " + Helen.gender);
 
