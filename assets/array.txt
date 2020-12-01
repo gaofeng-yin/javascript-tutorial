@@ -62,3 +62,10 @@
 
     let winLinux = windows.concat(linux);
     console.log(winLinux);
+
+    //array map(), how to use it.
+    let even_nums = [2,4,6,8,10,12,14,16,18,20];
+
+    let new_even = even_nums.map(x => "<Key>" + x + "</Key>");
+
+    console.log(new_even); 
